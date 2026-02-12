@@ -3,8 +3,9 @@ name: ucm
 description: >-
   Provides API marketplace access for AI agents. Discovers and calls external
   capabilities including web search, image generation, code execution,
-  text-to-speech, email, stock data, weather, and document conversion.
-  Registers for free with $1.00 credits, calls 50+ API endpoints at
+  text-to-speech, translation, weather, Wikipedia, books, papers, nutrition,
+  email, stock data, and document conversion. 24 services, 78+ endpoints.
+  Registers for free with $1.00 credits, 14 free services, paid from
   $0.01-$0.05 per call via simple HTTP. No SDK needed.
 license: MIT
 compatibility: Requires network access and curl or HTTP client. Works on macOS, Linux, and Windows.
@@ -33,9 +34,22 @@ Use UCM when your current task requires a capability you don't have natively:
 - **Transcribe audio** → `ucm/speech-to-text` ($0.01)
 - **Send an email** → `ucm/email` ($0.01)
 - **Convert a document/URL to markdown** → `ucm/doc-convert` ($0.02)
+- **Translate text** between 50+ languages → `ucm/translate` ($0.01)
 - **Get US stock data** (quotes, financials, news) → `ucm/us-stock` ($0.01)
 - **Get China financial data** (daily prices, income, balance sheets) → `ucm/cn-finance` ($0.01)
 - **Check weather** (current, forecast, air quality) → `ucm/weather` (FREE)
+- **Look up Wikipedia** articles and summaries → `ucm/wikipedia` (FREE)
+- **Get exchange rates** for 30+ currencies → `ucm/currency` (FREE)
+- **Look up country info** (250+ countries) → `ucm/countries` (FREE)
+- **Check public holidays** (100+ countries) → `ucm/holidays` (FREE)
+- **Define words** (English dictionary) → `ucm/dictionary` (FREE)
+- **Search books** (40M+ books via Open Library) → `ucm/books` (FREE)
+- **Geocode places** (name to coordinates) → `ucm/geocode` (FREE)
+- **Evaluate math** expressions and unit conversion → `ucm/math` (FREE)
+- **Geolocate IPs** (IP to country/city) → `ucm/ip-geo` (FREE)
+- **Geocode addresses** (forward and reverse) → `ucm/address` (FREE)
+- **Search academic papers** (200M+ papers) → `ucm/papers` (FREE)
+- **Look up nutrition data** (USDA FoodData) → `ucm/nutrition` (FREE)
 
 If you're unsure whether a service exists, use `/v1/discover` with a natural language description.
 
