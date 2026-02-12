@@ -18,11 +18,15 @@ No SDK, no MCP server, no running processes — just HTTP calls.
 
 ### Claude Code (Plugin Marketplace)
 
-```bash
-# Add the UCM marketplace
-/plugin marketplace add ucmai/ucm.ai
+Run these two commands **one at a time** in Claude Code:
 
-# Install the skill
+**Step 1** — Add the marketplace:
+```
+/plugin marketplace add https://github.com/ucmai/skills.git
+```
+
+**Step 2** — Install the skill:
+```
 /plugin install ucm@ucm-marketplace
 ```
 
