@@ -1,0 +1,11 @@
+{
+  "name": "ucm",
+  "description": "API marketplace for AI agents — discover and use 50+ API endpoints with simple HTTP calls",
+  "version": "0.3.0",
+  "author": {
+    "name": "UCM.ai"
+  },
+  "homepage": "https://ucm.ai",
+  "repository": "https://github.com/ucmai/ucm.ai",
+  "keywords": ["api", "marketplace", "web-search", "image-generation", "code-execution", "tts", "email"]
+}
