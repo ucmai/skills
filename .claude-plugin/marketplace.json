@@ -13,7 +13,7 @@
       "name": "ucm",
       "source": "./",
       "description": "API marketplace skill — lets agents discover and call 50+ API services at $0.01-$0.05 per call. Register for free, get $1.00 credits.",
-      "strict": false,
+      "strict": true,
       "skills": ["./ucm"]
     }
   ]
