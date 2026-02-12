@@ -1,0 +1,20 @@
+{
+  "name": "ucm-marketplace",
+  "owner": {
+    "name": "UCM.ai",
+    "email": "admin@ucm.ai"
+  },
+  "metadata": {
+    "description": "UCM — API Marketplace for AI Agents. Discover and use 50+ API endpoints (web search, image generation, code execution, TTS, email, stock data, and more) with simple HTTP calls.",
+    "version": "0.3.0"
+  },
+  "plugins": [
+    {
+      "name": "ucm",
+      "source": "./",
+      "description": "API marketplace skill — lets agents discover and call 50+ API services at $0.01-$0.05 per call. Register for free, get $1.00 credits.",
+      "strict": false,
+      "skills": ["./ucm"]
+    }
+  ]
+}
