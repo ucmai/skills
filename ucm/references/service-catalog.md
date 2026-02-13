@@ -30,8 +30,18 @@
 | `ucm/translate` | $0.01 | 1 | Text translation (50+ languages) |
 | `ucm/papers` | FREE | 2 | Academic paper search (200M+) |
 | `ucm/nutrition` | FREE | 2 | Nutrition data (USDA FoodData) |
+| `ucm/qr-code` | FREE | 1 | QR code generation |
+| `ucm/crypto` | FREE | 3 | Cryptocurrency data (CoinGecko) |
+| `ucm/news` | $0.01 | 2 | News search (GNews) |
+| `ucm/timezone` | FREE | 2 | Current time in any timezone |
+| `ucm/domain` | FREE | 1 | Domain WHOIS/RDAP info |
+| `ucm/quotes` | FREE | 3 | Inspirational quotes (ZenQuotes) |
+| `ucm/hacker-news` | FREE | 4 | Hacker News stories and items |
+| `ucm/random-data` | FREE | 4 | Random test data (FakerAPI) |
+| `ucm/poetry` | FREE | 3 | Poetry search (PoetryDB) |
+| `ucm/movies` | $0.01 | 2 | Movie database (OMDB) |
 
-**Total: 24 services, 78 endpoints**
+**Total: 34 services, 97 endpoints**
 
 ---
 
@@ -508,3 +518,204 @@ Nutrition data from USDA FoodData Central.
 - `fdc_id` (required): FDC ID from search results
 
 Returns: description, category, serving size, nutrients (energy, protein, fat, carbs, etc.)
+
+---
+
+## ucm/qr-code — FREE
+
+Generate QR code images from text or URLs.
+
+**Endpoint: `generate`**
+```json
+{ "data": "https://ucm.ai", "size": 300 }
+```
+- `data` (required): Text or URL to encode
+- `size` (optional): Image size in pixels (50-1000), default 200
+
+Returns: base64-encoded PNG image
+
+---
+
+## ucm/crypto — FREE
+
+Cryptocurrency market data from CoinGecko.
+
+**Endpoint: `price`**
+```json
+{ "ids": "bitcoin,ethereum,solana" }
+```
+- `ids` (required): Comma-separated CoinGecko IDs
+- `vs_currencies` (optional): Target currencies, default "usd"
+
+**Endpoint: `search`**
+```json
+{ "query": "solana" }
+```
+- `query` (required): Name or symbol to search
+
+**Endpoint: `coin`**
+```json
+{ "id": "bitcoin" }
+```
+- `id` (required): CoinGecko coin ID
+
+---
+
+## ucm/news — $0.01/call
+
+News search and top headlines via GNews.
+
+**Endpoint: `search`**
+```json
+{ "query": "artificial intelligence", "max": 5 }
+```
+- `query` (required): Search query
+- `max` (optional): Max results 1-10, default 5
+- `lang` (optional): Language code, default "en"
+- `country` (optional): Country code
+
+**Endpoint: `top-headlines`**
+```json
+{ "category": "technology", "max": 5 }
+```
+- `category` (optional): general, world, nation, business, technology, entertainment, sports, science, health
+- `max` (optional): 1-10, default 5
+
+---
+
+## ucm/timezone — FREE
+
+Current time in any timezone worldwide via WorldTimeAPI.
+
+**Endpoint: `by-zone`**
+```json
+{ "timezone": "America/New_York" }
+```
+- `timezone` (required): IANA timezone name
+
+**Endpoint: `list`**
+```json
+{}
+```
+Returns all available IANA timezones.
+
+---
+
+## ucm/domain — FREE
+
+Domain registration info via RDAP.
+
+**Endpoint: `lookup`**
+```json
+{ "domain": "example.com" }
+```
+- `domain` (required): Domain name
+
+Returns: registration date, expiration, nameservers, registrar, DNSSEC status
+
+---
+
+## ucm/quotes — FREE
+
+Inspirational quotes from ZenQuotes.
+
+**Endpoint: `random`**
+```json
+{}
+```
+Returns a random quote with author.
+
+**Endpoint: `today`**
+```json
+{}
+```
+Returns the quote of the day.
+
+**Endpoint: `quotes`**
+```json
+{}
+```
+Returns a batch of quotes (typically 50).
+
+---
+
+## ucm/hacker-news — FREE
+
+Hacker News stories and items via Firebase API.
+
+**Endpoint: `top`** / **`new`** / **`best`**
+```json
+{ "limit": 10 }
+```
+- `limit` (optional): Number of stories 1-30, default 10
+
+Returns: stories with title, URL, score, author, comment count.
+
+**Endpoint: `item`**
+```json
+{ "id": 12345 }
+```
+- `id` (required): Hacker News item ID
+
+Returns: full item details including text, kids (comment IDs).
+
+---
+
+## ucm/random-data — FREE
+
+Generate random fake data for testing via FakerAPI.
+
+**Endpoint: `persons`** / **`addresses`** / **`companies`** / **`texts`**
+```json
+{ "quantity": 5, "locale": "en_US" }
+```
+- `quantity` (optional): Number of items 1-20, default 5
+- `locale` (optional): Locale code (e.g. "en_US", "zh_CN", "ja_JP")
+
+---
+
+## ucm/poetry — FREE
+
+Poetry from PoetryDB.
+
+**Endpoint: `random`**
+```json
+{ "count": 1 }
+```
+- `count` (optional): Number of poems 1-5, default 1
+
+**Endpoint: `search`**
+```json
+{ "title": "Ozymandias" }
+```
+- `title` (required): Poem title to search
+
+**Endpoint: `author`**
+```json
+{ "author": "Shakespeare" }
+```
+- `author` (required): Author name
+
+---
+
+## ucm/movies — $0.01/call
+
+Movie and TV show database from OMDB.
+
+**Endpoint: `search`**
+```json
+{ "query": "Inception", "type": "movie" }
+```
+- `query` (required): Movie/show title to search
+- `type` (optional): "movie", "series", or "episode"
+- `year` (optional): Filter by release year
+- `page` (optional): Page number (10 results per page)
+
+**Endpoint: `movie`**
+```json
+{ "imdb_id": "tt1375666" }
+```
+- `imdb_id` OR `title` (one required): IMDb ID or exact title
+- `year` (optional): Narrow title search
+
+Returns: title, year, genre, director, actors, plot, IMDb/RT/Metacritic ratings, box office, poster
