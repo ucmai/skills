@@ -4,9 +4,9 @@ description: >-
   Provides API marketplace access for AI agents. Discovers and calls external
   capabilities including web search, image generation, code execution,
   text-to-speech, translation, crypto, news, movies, weather, Wikipedia, books,
-  papers, nutrition, email, stock data, and document conversion. 34 services, 97 endpoints.
-  Registers for free with $1.00 credits, 14 free services, paid from
-  $0.01-$0.05 per call via simple HTTP. No SDK needed. 22 free services.
+  papers, nutrition, email, stock data, and document conversion. 100 services, 217 endpoints.
+  Registers for free with $1.00 credits, 87 free services, paid from
+  $0.01-$0.05 per call via simple HTTP. No SDK needed. 87 free services.
 license: MIT
 compatibility: Requires network access and curl or HTTP client. Works on macOS, Linux, and Windows.
 argument-hint: "[service name or action]"
@@ -60,6 +60,72 @@ Use UCM when your current task requires a capability you don't have natively:
 - **Generate test data** (names, addresses, companies) → `ucm/random-data` (FREE)
 - **Browse poetry** (search by title/author) → `ucm/poetry` (FREE)
 - **Search movies & TV shows** (IMDb ratings, cast, plot) → `ucm/movies` ($0.01)
+- **Find rhyming words or synonyms** → `ucm/datamuse` (FREE)
+- **Search universities worldwide** → `ucm/universities` (FREE)
+- **Look up postal codes** (60+ countries) → `ucm/zip-code` (FREE)
+- **Get trivia questions** → `ucm/trivia` (FREE)
+- **Get jokes** by category → `ucm/jokes` (FREE)
+- **Get random advice** → `ucm/advice` (FREE)
+- **Get activity suggestions** → `ucm/bored` (FREE)
+- **Look up Bible verses** → `ucm/bible` (FREE)
+- **Get Chuck Norris jokes** → `ucm/chuck-norris` (FREE)
+- **Search recipes** → `ucm/recipes` (FREE)
+- **Search cocktail recipes** → `ucm/cocktails` (FREE)
+- **Search breweries** → `ucm/brewery` (FREE)
+- **Look up food products** by barcode → `ucm/food-products` (FREE)
+- **Get sunrise/sunset times** → `ucm/sunrise-sunset` (FREE)
+- **Get random dog images** by breed → `ucm/dog-images` (FREE)
+- **Get cat facts** → `ucm/cat-facts` (FREE)
+- **Generate avatars** → `ucm/avatars` (FREE)
+- **Get color info and schemes** → `ucm/colors` (FREE)
+- **Generate lorem ipsum text** → `ucm/lorem-ipsum` (FREE)
+- **Get NASA astronomy photo** or Mars rover images → `ucm/nasa` (FREE)
+- **Get SpaceX launch data** → `ucm/spacex` (FREE)
+- **Track ISS position** and astronauts → `ucm/iss` (FREE)
+- **Get space flight news** → `ucm/space-news` (FREE)
+- **Search arXiv papers** → `ucm/arxiv` (FREE)
+- **Get earthquake data** → `ucm/earthquakes` (FREE)
+- **Get World Bank indicators** → `ucm/world-bank` (FREE)
+- **Search FDA drugs/recalls** → `ucm/fda` (FREE)
+- **Get UK carbon intensity** → `ucm/carbon` (FREE)
+- **Look up elevation** by coordinates → `ucm/elevation` (FREE)
+- **Predict age by name** → `ucm/agify` (FREE)
+- **Predict gender by name** → `ucm/genderize` (FREE)
+- **Predict nationality by name** → `ucm/nationalize` (FREE)
+- **Look up UK postcodes** → `ucm/uk-postcodes` (FREE)
+- **Decode vehicle VINs** → `ucm/vehicles` (FREE)
+- **Search Met Museum collection** → `ucm/met-museum` (FREE)
+- **Search Art Institute of Chicago** → `ucm/art-chicago` (FREE)
+- **Search TV shows** → `ucm/tv-shows` (FREE)
+- **Search anime and manga** → `ucm/anime` (FREE)
+- **Search iTunes content** → `ucm/itunes` (FREE)
+- **Search music metadata** → `ucm/music` (FREE)
+- **Search internet radio** → `ucm/radio` (FREE)
+- **Browse free-to-play games** → `ucm/free-games` (FREE)
+- **Compare game prices** → `ucm/game-deals` (FREE)
+- **Look up Pokemon data** → `ucm/pokemon` (FREE)
+- **Look up D&D 5e data** (monsters, spells, classes) → `ucm/dnd` (FREE)
+- **Get meme templates** → `ucm/memes` (FREE)
+- **Get your public IP** → `ucm/ip-lookup` (FREE)
+- **Generate barcodes** → `ucm/barcode` (FREE)
+- **Check Wayback Machine** snapshots → `ucm/wayback` (FREE)
+- **Look up npm packages** → `ucm/npm` (FREE)
+- **Look up PyPI packages** → `ucm/pypi` (FREE)
+- **Search GitHub repos** → `ucm/github-repos` (FREE)
+- **Get country flag images** → `ucm/country-flags` (FREE)
+- **Virtual card deck** (shuffle, draw) → `ucm/deck-of-cards` (FREE)
+- **Get Star Wars data** → `ucm/star-wars` (FREE)
+- **Get XKCD comics** → `ucm/xkcd` (FREE)
+- **Search Rick & Morty** characters/episodes → `ucm/rick-morty` (FREE)
+- **Get Nobel Prize data** → `ucm/nobel-prize` (FREE)
+- **Get historical events** (on this day) → `ucm/historical-events` (FREE)
+- **Get Kanye West quotes** → `ucm/kanye` (FREE)
+- **Search Rust crates** → `ucm/crates` (FREE)
+- **Search Docker Hub** images → `ucm/docker-hub` (FREE)
+- **Get chess puzzles** and player data → `ucm/lichess` (FREE)
+- **Look up chemical elements** → `ucm/periodic-table` (FREE)
+- **Look up airports** by IATA code → `ucm/airports` (FREE)
+- **Get random fox images** → `ucm/random-fox` (FREE)
 
 If you're unsure whether a service exists, use `/v1/discover` with a natural language description.
 
