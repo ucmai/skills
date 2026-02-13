@@ -3,10 +3,10 @@ name: ucm
 description: >-
   Provides API marketplace access for AI agents. Discovers and calls external
   capabilities including web search, image generation, code execution,
-  text-to-speech, translation, weather, Wikipedia, books, papers, nutrition,
-  email, stock data, and document conversion. 24 services, 78+ endpoints.
+  text-to-speech, translation, crypto, news, movies, weather, Wikipedia, books,
+  papers, nutrition, email, stock data, and document conversion. 34 services, 97 endpoints.
   Registers for free with $1.00 credits, 14 free services, paid from
-  $0.01-$0.05 per call via simple HTTP. No SDK needed.
+  $0.01-$0.05 per call via simple HTTP. No SDK needed. 22 free services.
 license: MIT
 compatibility: Requires network access and curl or HTTP client. Works on macOS, Linux, and Windows.
 argument-hint: "[service name or action]"
@@ -50,6 +50,16 @@ Use UCM when your current task requires a capability you don't have natively:
 - **Geocode addresses** (forward and reverse) → `ucm/address` (FREE)
 - **Search academic papers** (200M+ papers) → `ucm/papers` (FREE)
 - **Look up nutrition data** (USDA FoodData) → `ucm/nutrition` (FREE)
+- **Generate QR codes** from text or URLs → `ucm/qr-code` (FREE)
+- **Get crypto prices** (10,000+ coins) → `ucm/crypto` (FREE)
+- **Search news articles** by keyword → `ucm/news` ($0.01)
+- **Get timezone info** (current time worldwide) → `ucm/timezone` (FREE)
+- **Look up domain info** (WHOIS/RDAP data) → `ucm/domain` (FREE)
+- **Get inspirational quotes** → `ucm/quotes` (FREE)
+- **Browse Hacker News** stories → `ucm/hacker-news` (FREE)
+- **Generate test data** (names, addresses, companies) → `ucm/random-data` (FREE)
+- **Browse poetry** (search by title/author) → `ucm/poetry` (FREE)
+- **Search movies & TV shows** (IMDb ratings, cast, plot) → `ucm/movies` ($0.01)
 
 If you're unsure whether a service exists, use `/v1/discover` with a natural language description.
 
