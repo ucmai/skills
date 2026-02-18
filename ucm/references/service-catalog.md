@@ -271,7 +271,7 @@ US stock market data via Finnhub. 11 endpoints:
 
 **Example:**
 ```json
-{ "service_id": "ucm/us-stock", "endpoint": "quote", "body": { "symbol": "AAPL" } }
+{ "service_id": "ucm/us-stock", "endpoint": "quote", "params": { "symbol": "AAPL" } }
 ```
 
 ---
@@ -324,7 +324,7 @@ China financial data via Tushare Pro. 26 endpoints:
 
 **Example:**
 ```json
-{ "service_id": "ucm/cn-finance", "endpoint": "daily", "body": { "ts_code": "000001.SZ", "start_date": "20240101", "end_date": "20240131" } }
+{ "service_id": "ucm/cn-finance", "endpoint": "daily", "params": { "ts_code": "000001.SZ", "start_date": "20240101", "end_date": "20240131" } }
 ```
 
 ---
@@ -342,7 +342,7 @@ Global weather data powered by Open-Meteo. All endpoints free.
 
 **Example:**
 ```json
-{ "service_id": "ucm/weather", "endpoint": "current", "body": { "city": "Tokyo" } }
+{ "service_id": "ucm/weather", "endpoint": "current", "params": { "city": "Tokyo" } }
 ```
 
 ---
