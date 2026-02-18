@@ -8,14 +8,11 @@ description: >-
   Registers for free with $1.00 credits, 87 free services, paid from
   $0.01-$0.05 per call via simple HTTP. No SDK needed. 87 free services.
 license: MIT
+homepage: https://ucm.ai
 compatibility: Requires network access and curl or HTTP client. Works on macOS, Linux, and Windows.
 argument-hint: "[service name or action]"
-allowed-tools: Bash(curl:*) Read Grep
-metadata:
-  author: UCM.ai
-  version: "0.3.0"
-  website: https://ucm.ai
-  repository: https://github.com/ucmai/ucm.ai
+allowed-tools: Bash(curl:*) Grep
+metadata: {"openclaw":{"primaryEnv":"UCM_API_KEY","requires":{"env":["UCM_API_KEY"]},"source":"https://github.com/ucmai/skills"},"author":"UCM.ai","version":"1.0.4","website":"https://ucm.ai","repository":"https://github.com/ucmai/skills"}
 ---
 
 # UCM — API Marketplace for AI Agents
