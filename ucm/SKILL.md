@@ -166,7 +166,7 @@ curl -s -X POST https://registry.ucm.ai/v1/call \
   -d '{
     "service_id": "ucm/web-search",
     "endpoint": "search",
-    "body": { "query": "latest AI news" }
+    "params": { "query": "latest AI news" }
   }'
 ```
 
